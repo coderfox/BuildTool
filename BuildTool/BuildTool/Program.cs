@@ -67,11 +67,7 @@ namespace BuildTool
                 }
                 else if (sLine.IndexOf("[assembly: AssemblyFileVersion") == 0)
                 {
-                    var res = MessageBox.Show("是否增加文件版本号？", "BuildTool", MessageBoxButtons.YesNo);
-                    if (res.HasFlag(DialogResult.Yes))
-                    {
-                        sNewLine = VerAdd(sLine);
-                    }
+                    sNewLine = VerAdd(sLine);
                 }
                 else
                 {
